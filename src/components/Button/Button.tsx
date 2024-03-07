@@ -22,7 +22,6 @@ function Button({
 	appearence = 'small',
 	...props
 }: ButtonProps) {
-	console.log('button');
 	return (
 		<button
 			className={cn(styles['button'], styles['accent'], className, {
