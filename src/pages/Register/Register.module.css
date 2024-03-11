@@ -1,0 +1,44 @@
+.login {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	width: 100%;
+	max-width: 500px;
+}
+.form {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.field {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+}
+
+.field label {
+	color: #c4c4c4;
+}
+
+.links {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.links div {
+	font-weight: 600;
+	font-size: 14px;
+	text-align: center;
+	color: var(--text-secondary-color);
+}
+.links a {
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+.error {
+	background: red;
+	color: white;
+	padding: 20px;
+}
