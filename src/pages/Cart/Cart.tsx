@@ -19,15 +19,18 @@ export function Cart() {
 	const navigate = useNavigate();
 	const dispatch = useDispatch<AppDispatch>();
 
-	const total = items
-		.map((i) => {
-			const product = cartProducts.find((p) => p.id === i.id);
-			if (!product) {
-				return 0;
-			}
-			return i.count * product.price;
-		})
-		.reduce((acc, i) => (acc += i));
+	const total =
+		items.length === 0
+			? 0
+			: items
+				.map((i) => {
+					const product = cartProducts.find((p) => p.id === i.id);
+					if (!product) {
+						return 0;
+					}
+					return i.count * product.price;
+				})
+				.reduce((acc, i) => (acc += i));
 
 	const getItem = async (id: number) => {
 		const { data } = await axios.get<Product>(`${PREFIX}/products/${id}`);
